@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8 mx-auto">
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">新しい対話を開始</h5>
+                <div class="input-group mb-3">
+                    <input type="text" id="theme-input" class="form-control" 
+                           placeholder="テーマを入力してください（例：環境問題、AI技術の未来など）">
+                    <button class="btn btn-primary" onclick="startDialogue()">
+                        開始
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Persona Information -->
+        <div id="persona-container" class="mb-4"></div>
+
+        <!-- Chat Container -->
+        <div class="card">
+            <div class="card-body">
+                <div id="chat-messages" class="chat-container mb-3"></div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
